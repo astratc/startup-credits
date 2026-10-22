@@ -10,8 +10,8 @@ entity:
       valid_from: 2026-10-22T08:25:32.000Z
   category: auth-security
 profile:
-  summary: PropelAuth provides B2B authentication, including login and signup, organization management, enterprise SSO and SCIM, API keys and MCP authentication.
-  description: PropelAuth is a B2B authentication platform with hosted login UIs, organizations and RBAC, enterprise SSO and SCIM, user impersonation, API keys and MCP authentication.
+  summary: PropelAuth provides authentication with pre-built login, signup and organization management UIs, roles and permissions, enterprise SSO and SCIM, and MCP server auth.
+  description: PropelAuth is an auth provider with pre-built login and signup UIs, organizations and RBAC, SAML, OIDC and SCIM, user impersonation, audit logs and MCP server auth.
   links:
     site: https://www.propelauth.com
     pricing: https://www.propelauth.com/pricing
