@@ -1,0 +1,97 @@
+schema_version: sourcey.entity-authoring/v1alpha1
+entity:
+  entity_id: ent_01m5hbe98efx592jg4w8rmtxzx
+  slug: propelauth
+  slug_aliases: []
+  name: PropelAuth
+  domains:
+    - value: propelauth.com
+      role: primary
+      valid_from: 2026-10-22T08:25:32.000Z
+  category: auth-security
+profile:
+  summary: PropelAuth provides B2B authentication, including login and signup, organization management, enterprise SSO and SCIM, API keys and MCP authentication.
+  description: PropelAuth is a B2B authentication platform with hosted login UIs, organizations and RBAC, enterprise SSO and SCIM, user impersonation, API keys and MCP authentication.
+  links:
+    site: https://www.propelauth.com
+    pricing: https://www.propelauth.com/pricing
+sources:
+  - source_id: src_624cffa69dfc28fb91811e760e27be3d21d4c5abe21a2806790428388feacfb0
+    url: https://www.propelauth.com/startup-program
+  - source_id: src_78403addbeaac2871865459851713cd3e36b547f9a465e73bd2934cffac826ce
+    url: https://www.propelauth.com/pricing
+programs:
+  - program_id: prg_01m5hbe98mc4ydrfbafcwqcz9n
+    program_slug: propelauth-startup-program
+    program_slug_aliases: []
+    title: PropelAuth Startup Program
+    summary: The PropelAuth Startup Program gives early-stage companies the Growth plan free for six months, or at 50% off for twelve months.
+    source_ids:
+      - src_624cffa69dfc28fb91811e760e27be3d21d4c5abe21a2806790428388feacfb0
+      - src_78403addbeaac2871865459851713cd3e36b547f9a465e73bd2934cffac826ce
+offers:
+  - offer_id: off_01m5hbe98mr0t91ymtq1mwv31j
+    program_id: prg_01m5hbe98mc4ydrfbafcwqcz9n
+    offer_slug: growth-plan-free-for-six-months
+    offer_slug_aliases: []
+    title: PropelAuth Growth plan free for 6 months
+    summary: Startups that raised less than $5M, started in the last three years, have fewer than 25 people and never paid for PropelAuth get the $150/month Growth plan free for six months.
+    description: The six-month option is worth $900 of Growth. Regular Growth pricing applies after the six months, and the company can drop to the Free plan whenever it wants.
+    lifecycle:
+      status: active
+      effective_from: 2026-10-22T08:25:32.000Z
+    economics:
+      benefits:
+        - benefit_id: ben_01
+          kind: free-service
+          service: PropelAuth Growth plan
+          description: The full Growth plan, normally $150 per month, free for the first six months ($900 of Growth).
+          duration:
+            kind: exact
+            value: P6M
+      consideration:
+        kind: none
+    eligibility:
+      rule:
+        kind: all
+        rules:
+          - criterion_id: cri_01
+            fact: company.funding_raised_usd
+            kind: predicate
+            operator: lt
+            statement: The company has raised less than $5M.
+            value:
+              type: number
+              value: 5000000
+          - criterion_id: cri_02
+            fact: company.age_months
+            kind: predicate
+            operator: lte
+            statement: The company started in the last three years.
+            value:
+              type: number
+              value: 36
+          - criterion_id: cri_03
+            fact: company.employee_count
+            kind: predicate
+            operator: lt
+            statement: The company has fewer than 25 people.
+            value:
+              type: number
+              value: 25
+          - criterion_id: cri_04
+            kind: manual
+            reason: external-verification
+            statement: The company has not paid for a PropelAuth plan yet.
+    roles:
+      terms_authority_entity_id: ent_01m5hbe98efx592jg4w8rmtxzx
+      access_operator_entity_id: ent_01m5hbe98efx592jg4w8rmtxzx
+    access:
+      availability: public
+      method: contact
+      url: https://www.propelauth.com/startup-program
+      instructions: Use the Email us button for the 6 months free option on the startup program page to email PropelAuth support. Companies close on one of the criteria are invited to email anyway.
+    terms_url: https://www.propelauth.com/startup-program
+    source_ids:
+      - src_624cffa69dfc28fb91811e760e27be3d21d4c5abe21a2806790428388feacfb0
+      - src_78403addbeaac2871865459851713cd3e36b547f9a465e73bd2934cffac826ce
